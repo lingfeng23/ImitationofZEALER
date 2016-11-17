@@ -1,5 +1,5 @@
 /**
- * Created by Administrator on 2016/4/13.
+ * Created by Administrator on 2016/10/12.
  */
 $(document).ready(function() {
 	//鼠标划入显示APP下载页面
@@ -130,6 +130,24 @@ $(document).ready(function() {
 			"top": "20px",
 			"opacity": 0
 		}, 300);
+	});
+	//	机型选择
+	$(".wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.phone dt").click(function(event) {
+		$(this).next().slideToggle(250);
+		event.stopPropagation();
+	});
+	$(".wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.phone dd div").click(function() {
+		var get_text = $(this).text();
+		$(this).parent().slideUp(250, function() {
+			$(this).prev().text(get_text);
+		});
+	});
+	$(window).click(function(event) {
+		var t = $(this).hasClass("fault");
+		if(!t) {
+			$(".wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.phone dd").slideUp(250);
+		}
+		event.stopPropagation();
 	});
 	//维修项目点击出现、消失选择表单的实现
 	$(".wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.fault dt").click(function(event) {

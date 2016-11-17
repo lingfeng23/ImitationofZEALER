@@ -6,6 +6,9 @@
 	font-family: "Helvitica Neue", Helvitica, Arial, "Hiragino Sans GB", "Microsoft YaHei", "Arial Regular", "Microsoft JhengHei", sans-serif, "宋体";
 }
 
+
+/*置顶导航栏*/
+
 .nav_top {
 	width: 100%;
 	height: 60px;
@@ -112,10 +115,16 @@
 	left: 50%;
 }
 
+
+/*主页面*/
+
 .main {
 	position: relative;
 	top: 60px;
 }
+
+
+/*carousel*/
 
 .carousel {
 	position: relative;
@@ -194,6 +203,9 @@
 .carousel .img_btn .btn_r {
 	right: 0;
 }
+
+
+/*wrap1*/
 
 .wrap1 {
 	width: 100%;
@@ -290,6 +302,9 @@
 	color: rgba(13, 13, 13, 0.8);
 }
 
+
+/*wrap2*/
+
 .wrap2 {
 	width: 100%;
 	height: 690px;
@@ -346,9 +361,10 @@
 	height: 36px;
 }
 
+
 .wrap2 .left_list li a,
 .wrap2 .right_list li a {
-	display: block;
+	/*display: block;*/
 	line-height: 36px;
 	color: rgba(13, 13, 13, 0.8);
 }
@@ -360,7 +376,7 @@
 .wrap2 .list_author {
 	float: right;
 	font-size: 14px;
-	margin-top: -36px;
+	/*margin-top: 0px;*/
 }
 
 .wrap2 .life {
@@ -402,6 +418,9 @@
 	left: 8px;
 	bottom: 8px;
 }
+
+
+/*wrap3*/
 
 .wrap3 {
 	width: 100%;
@@ -490,6 +509,33 @@
 	color: rgba(22, 22, 22, 0.89);
 	cursor: pointer;
 }
+.wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.phone dt {
+	background: url(../img/fix_arrow.png) 96% 50% no-repeat;
+}
+
+.wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.phone dd {
+	height: 273px;
+	border: 1px solid black;
+	border-top: none;
+	display: none;
+	z-index: 2;
+	position: relative;
+	background-color: #fff;
+}
+
+.wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.phone dd div {
+	width: 96%;
+	margin: 0 auto;
+	height: 38px;
+	line-height: 38px;
+	color: rgba(22, 22, 22, 0.89);
+	border-bottom: 1px solid #e6e6e6;
+	cursor: pointer;
+}
+
+.wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.phone dd div.last_div {
+	border-bottom: none;
+}
 
 .wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.fault dt {
 	background: url(../img/fix_arrow.png) 96% 50% no-repeat;
@@ -534,6 +580,9 @@
 	text-align: center;
 	color: #fff;
 }
+
+
+/*wrap4*/
 
 .wrap4 {
 	width: 100%;
@@ -685,6 +734,9 @@
 	width: 90%;
 }
 
+
+/*wrap5*/
+
 .wrap5 {
 	width: 100%;
 	height: 722px;
@@ -787,6 +839,9 @@
 	font-size: 16px;
 	text-align: center;
 }
+
+
+/*footer*/
 
 .footer {
 	width: 100%;

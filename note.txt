@@ -1,0 +1,37 @@
+note1:
+1.li display:inline-block 后 在其中一个li中加入文字后 li显示不同行了，使用vertical-align:top使加入文字的重心提高，解决了问题；
+2.鼠标划入白条导航条时由于加了1px的边框，要把滑入的li宽度减2px，解决鼠标划入li时，li有伸缩现象的问题。
+3.轮播图像比窗口大时，为了实现高度不变，图片不伸缩，图片还居中的方法var mywidth=document.documentElement.clientWidth*0.5||document.body.clientWidth*0.5;
+    $(".carousel .images").css({"left":mywidth,"margin-left":"-960px"});   。
+4.之前写过的无缝轮播图的实现 以及其中导航小白条鼠标滑入时的样式的改变（动态添加了数字）。
+note2:
+1.由于浮动会脱离文本流，容器不设高度的话，不好继续下去，切记要设置容器高度；
+2.鼠标划入图片动画效果的实现 ：  图片  2个小白条  和 播放 文字   放在一个div中  定位好    然后通过jQuery的animate在鼠标滑入时改变这个3个块的opacity以及定位；
+3.jQuery版本选择是有一定标准的，不同版本显示效果不一样。
+note3:
+1.CSS3的渐变效果 比如 liner-gradient(top #000 #fff)
+2.自定义表单 <dl><dt><dd>
+3.由于需要默认选中项不在下拉菜单中类似<select>的效果，利用自定义表单实现，slideUp slideDown slideToggle的使用，注意使用防止冒泡的方法，不然下拉菜单出来一会就会自动消失
+//维修项目点击出现、消失选择表单的实现
+    $(".wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.fault dt").click(function (event) {
+        $(this).next().slideToggle(250);
+        event.stopPropagation();
+    });
+    $(".wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.fault dd div").click(function () {
+        var get_text=$(this).text();
+        $(this).parent().slideUp(250,function () {
+            $(this).prev().text(get_text);
+        });
+    });
+    $(window).click(function (event) {
+        var t=$(this).hasClass("fault");
+        if(!t){
+            $(".wrap3 .sec_fix .fix .fix_form .fix_form_submit dl.fault dd").slideUp(250);
+        }
+        event.stopPropagation();
+    });
+note4:
+1.根据上个下拉菜单的选择的结果  实现下个菜单点击出现的菜单     以及根据下来菜单有无 点击的DIV的背景图片的改变。
+2.鼠标划入图片动画效果的实现 ：  图片  2个小白条  和 播放 文字   放在一个div中  定位好    然后通过jQuery的animate在鼠标滑入时改变这个3个块的opacity以及定位。
+note5:
+1.维修中选择机型还留有一个bug，点击机型是时下方故障栏显示效果不佳，但在warp4中机型选择很好地解决了。
